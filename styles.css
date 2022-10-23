@@ -3,32 +3,40 @@
 body {
     background-color: powderblue;
     text-align: center;
+    font-family: 'Bungee', cursive;
+    transition: 0.2s;
 }
 
 h1 {
-
+    font-size: 2.3rem;
+    line-height: 2.5rem;
 }
 
 /* Main grid */
 
 .container {
     display: grid;
-    grid-template-rows: auto;
+    grid-template-rows: 15rem auto;
     grid-template-columns: 2fr 3fr 2fr;
 }
 
 .game-text {
     grid-row-start: 1;
-    grid-row-start: 2;
+    grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 4;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .game-field {
     grid-row-start: 2;
-    grid-row-start: 3;
+    grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+    margin-top: 25px;
 }
 
 /* Boxes grid */
@@ -50,6 +58,7 @@ h1 {
     border-radius: 15px;
     border: 2px solid black;
     padding: 0px;
+    transition: 0.1s;
 }
 
 .box-green {
@@ -75,5 +84,18 @@ h1 {
 /* Lighted box */
 
 .lighted {
-    filter: invert(100%);
+    background-color: white;
+}
+
+/* Clicked box */
+
+.clicked {
+    background-color: black;
+    border: white;
+}
+
+/* Lost the game background */
+
+.lost {
+    background-color: rgb(186, 45, 45);
 }
